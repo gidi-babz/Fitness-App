@@ -21,7 +21,6 @@ const SearchExercises = () => {
     };
 
     fetchExercisesData();
-    console.log(bodyParts);
   }, []);
 
   const handleSearch = async () => {
