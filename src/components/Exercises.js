@@ -5,6 +5,7 @@ import { Box, Stack, Typography } from '@mui/material';
 import ExerciseCard from './ExerciseCard';
 
 import { exerciseOptions, fetchData } from '../utils/FetchData';
+import { url } from './SearchExercises';
 
 const Exercises = ({ exercises, setExercises, bodyPart }) => {
   const [currentPage, setCurrentPage] = useState(1);
@@ -25,6 +26,23 @@ const Exercises = ({ exercises, setExercises, bodyPart }) => {
 
     window.scrollTo({ top: '1800', behavior: 'smooth' });
   };
+
+  useEffect(() => {
+    const fetchExercisesData = async () => {
+      let exercisesData = [];
+
+      if (bodyPart === 'all') {
+        exercisesData = await fetchData(url, exerciseOptions);
+      } else {
+        exercisesData = await fetchData(
+          `${url}/bodyPart/${bodyPart}`,
+          exerciseOptions
+        );
+      }
+      setExercises(exercisesData);
+    };
+    fetchExercisesData();
+  }, [bodyPart]);
   return (
     <Box
       id="exercises"

@@ -5,7 +5,7 @@ import { Box, TextField, Button, Stack, Typography } from '@mui/material';
 
 import { exerciseOptions, fetchData } from '../utils/FetchData';
 
-const url = 'https://exercisedb.p.rapidapi.com/exercises';
+export const url = 'https://exercisedb.p.rapidapi.com/exercises';
 
 const SearchExercises = ({ setExercises, setBodyPart, bodyPart }) => {
   const [search, setSearch] = useState('');
