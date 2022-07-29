@@ -9,6 +9,7 @@ import { url } from './SearchExercises';
 
 const Exercises = ({ exercises, setExercises, bodyPart }) => {
   const [currentPage, setCurrentPage] = useState(1);
+  console.log(exercises);
 
   const exercisePerPage = 9;
 
