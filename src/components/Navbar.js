@@ -39,6 +39,7 @@ const Navbar = () => {
             textDecoration: 'none',
             color: '#3a1212',
             borderBottom: '3px solid #ff2625',
+            marginRight: { xs: '10px' },
           }}
         >
           Home
