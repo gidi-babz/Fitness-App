@@ -29,7 +29,7 @@ const Navbar = () => {
       </Link>
       <Stack
         direction="row"
-        gap="40px"
+        gap={{ lg: '40px', xs: '32px' }}
         fontSize={{ lg: '24px', xs: '18px' }}
         alignItems="flex-end"
       >
@@ -39,7 +39,6 @@ const Navbar = () => {
             textDecoration: 'none',
             color: '#3a1212',
             borderBottom: '3px solid #ff2625',
-            marginRight: { xs: '10px' },
           }}
         >
           Home
