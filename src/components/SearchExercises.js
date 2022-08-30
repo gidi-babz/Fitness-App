@@ -61,7 +61,7 @@ const SearchExercises = ({ setExercises, setBodyPart, bodyPart }) => {
               border: 'none',
               borderRadius: '5px',
             },
-            width: { lg: '800px', xs: '350px' },
+            width: { lg: '800px', xs: '310px', sm: '350px', md: '400px' },
             backgroundColor: '#fff',
             borderRadius: '40px',
           }}

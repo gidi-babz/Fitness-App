@@ -9,7 +9,6 @@ import { url } from './SearchExercises';
 
 const Exercises = ({ exercises, setExercises, bodyPart }) => {
   const [currentPage, setCurrentPage] = useState(1);
-  console.log(exercises);
 
   const exercisePerPage = 9;
 
@@ -17,7 +16,7 @@ const Exercises = ({ exercises, setExercises, bodyPart }) => {
 
   const indexOfFirstExercise = indexOfLastExercise - exercisePerPage;
 
-  const currentExercises = exercises.slice(
+  const currentExercises = exercises?.slice(
     indexOfFirstExercise,
     indexOfLastExercise
   );
@@ -54,7 +53,7 @@ const Exercises = ({ exercises, setExercises, bodyPart }) => {
         p: '20px',
       }}
     >
-      <Typography variant="h3" mb="46px">
+      <Typography variant="h3" mb="46px" fontSize={{ xs: '40px' }}>
         Showing Results
       </Typography>
       <Stack
