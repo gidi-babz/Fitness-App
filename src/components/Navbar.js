@@ -48,6 +48,8 @@ const Navbar = () => {
           style={{
             textDecoration: 'none',
             color: '#3a1212',
+            marginLeft: '12px',
+            // paddingLeft: { xs: '12px' },
           }}
         >
           Exercises
